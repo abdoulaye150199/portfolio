@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Portfolio</title>
+    <style>
+        body { margin: 0; padding: 20px; background: #1a1a2e; color: white; font-family: Arial, sans-serif; }
+        .error { color: #ff6b6b; background: #2a0a0a; padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .success { color: #4ecdc4; }
+    </style>
+</head>
+<body>
+    <h1>Debug Portfolio</h1>
+    <div id="status">Testing...</div>
+    <div id="results"></div>
+    
+    <script>
+        async function testAPI() {
+            const status = document.getElementById('status');
+            const results = document.getElementById('results');
+            
+            try {
+                status.innerHTML = '<div class="success">Testing API connection...</div>';
+                
+                const response = await fetch('http://localhost:3001/profile');
+                const data = await response.json();
+                
+                if (data && data.name) {
+                    status.innerHTML = '<div class="success">✅ API Connected Successfully!</div>';
+                    results.innerHTML = `<h2>Profile Data:</h2><pre>${JSON.stringify(data, null, 2)}</pre>`;
+                } else {
+                    status.innerHTML = '<div class="error">❌ API returned empty data</div>';
+                }
+            } catch (error) {
+                status.innerHTML = `<div class="error">❌ API Error: ${error.message}</div>`;
+                results.innerHTML = `<div class="error">Full error: ${error.stack}</div>`;
+            }
+        }
+        
+        testAPI();
+    </script>
+</body>
+</html>
