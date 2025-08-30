@@ -197,171 +197,79 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="p-8 space-y-8">
-          {/* Informations personnelles */}
+        <form onSubmit={handleSubmit} className="p-8 space-y-6">
+          {/* Informations essentielles */}
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="group">
-              <label htmlFor="name" className="block text-gray-700 dark:text-gray-200 font-semibold mb-3 text-lg">
+            <div>
+              <label htmlFor="name" className="block text-gray-700 dark:text-gray-200 font-medium mb-2">
                 Nom complet *
               </label>
-              <div className="relative">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-6 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-gray-200 dark:border-gray-600 rounded-2xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02] shadow-lg hover:shadow-xl"
-                  placeholder="Votre nom complet"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-              </div>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 bg-white/90 dark:bg-gray-800/90 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                placeholder="Votre nom"
+              />
             </div>
-            <div className="group">
-              <label htmlFor="email" className="block text-gray-700 dark:text-gray-200 font-semibold mb-3 text-lg">
+            <div>
+              <label htmlFor="email" className="block text-gray-700 dark:text-gray-200 font-medium mb-2">
                 Email *
               </label>
-              <div className="relative">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-6 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-gray-200 dark:border-gray-600 rounded-2xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02] shadow-lg hover:shadow-xl"
-                  placeholder="votre@email.com"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-              </div>
-            </div>
-          </div>
-
-          <div className="group">
-            <label htmlFor="phone" className="block text-gray-700 dark:text-gray-200 font-semibold mb-3 text-lg">
-              Téléphone
-            </label>
-            <div className="relative">
               <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-6 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-gray-200 dark:border-gray-600 rounded-2xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02] shadow-lg hover:shadow-xl"
-                placeholder="+221 XX XXX XX XX"
+                required
+                className="w-full px-4 py-3 bg-white/90 dark:bg-gray-800/90 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                placeholder="votre@email.com"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
             </div>
           </div>
 
-          {/* Détails du projet */}
-          <div className="group">
-            <label htmlFor="projectType" className="block text-gray-700 dark:text-gray-200 font-semibold mb-3 text-lg">
+          {/* Type de projet */}
+          <div>
+            <label htmlFor="projectType" className="block text-gray-700 dark:text-gray-200 font-medium mb-2">
               Type de projet *
             </label>
-            <div className="relative">
-              <select
-                id="projectType"
-                name="projectType"
-                value={formData.projectType}
-                onChange={handleInputChange}
-                required
-                className="w-full px-6 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-gray-200 dark:border-gray-600 rounded-2xl text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02] shadow-lg hover:shadow-xl appearance-none"
-              >
-                <option value="">Sélectionnez un type de projet</option>
-                <option value="site web">🌐 Site Web</option>
-                <option value="application mobile">📱 Application Mobile</option>
-                <option value="e-commerce">🛒 E-commerce</option>
-                <option value="application web">💻 Application Web</option>
-                <option value="design UI/UX">🎨 Design UI/UX</option>
-                <option value="autre">✨ Autre</option>
-              </select>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-              <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
+            <select
+              id="projectType"
+              name="projectType"
+              value={formData.projectType}
+              onChange={handleInputChange}
+              required
+              className="w-full px-4 py-3 bg-white/90 dark:bg-gray-800/90 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+            >
+              <option value="">Choisissez un type</option>
+              <option value="site web">Site Web</option>
+              <option value="application mobile">Application Mobile</option>
+              <option value="e-commerce">E-commerce</option>
+              <option value="application web">Application Web</option>
+              <option value="design UI/UX">Design UI/UX</option>
+              <option value="autre">Autre</option>
+            </select>
           </div>
 
-          <div className="group">
-            <label htmlFor="description" className="block text-gray-700 dark:text-gray-200 font-semibold mb-3 text-lg">
+          {/* Description */}
+          <div>
+            <label htmlFor="description" className="block text-gray-700 dark:text-gray-200 font-medium mb-2">
               Description du projet *
             </label>
-            <div className="relative">
-              <textarea
-                id="description"
-                name="description"
-                value={formData.description}
-                onChange={handleInputChange}
-                required
-                rows={5}
-                className="w-full px-6 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-gray-200 dark:border-gray-600 rounded-2xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02] shadow-lg hover:shadow-xl resize-none"
-                placeholder="Décrivez votre projet en détail, vos objectifs, fonctionnalités souhaitées..."
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            </div>
-          </div>
-
-          {/* Budget et délai */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="group">
-              <label htmlFor="budget" className="block text-gray-700 dark:text-gray-200 font-semibold mb-3 text-lg">
-                <DollarSign className="w-5 h-5 inline mr-2 text-primary-600" />
-                Budget approximatif
-              </label>
-              <div className="relative">
-                <select
-                  id="budget"
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-gray-200 dark:border-gray-600 rounded-2xl text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02] shadow-lg hover:shadow-xl appearance-none"
-                >
-                  <option value="">Sélectionnez une fourchette</option>
-                  <option value="moins de 1000€">💰 Moins de 1000€</option>
-                  <option value="1000€ - 5000€">💎 1000€ - 5000€</option>
-                  <option value="5000€ - 10000€">🏆 5000€ - 10000€</option>
-                  <option value="plus de 10000€">🚀 Plus de 10000€</option>
-                </select>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div className="group">
-              <label htmlFor="timeline" className="block text-gray-700 dark:text-gray-200 font-semibold mb-3 text-lg">
-                <Clock className="w-5 h-5 inline mr-2 text-primary-600" />
-                Délai souhaité
-              </label>
-              <div className="relative">
-                <select
-                  id="timeline"
-                  name="timeline"
-                  value={formData.timeline}
-                  onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-gray-200 dark:border-gray-600 rounded-2xl text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02] shadow-lg hover:shadow-xl appearance-none"
-                >
-                  <option value="">Sélectionnez un délai</option>
-                  <option value="urgent (1-2 semaines)">⚡ Urgent (1-2 semaines)</option>
-                  <option value="1 mois">📅 1 mois</option>
-                  <option value="2-3 mois">🕐 2-3 mois</option>
-                  <option value="flexible">🎯 Flexible</option>
-                </select>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-primary-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+            <textarea
+              id="description"
+              name="description"
+              value={formData.description}
+              onChange={handleInputChange}
+              required
+              rows={4}
+              className="w-full px-4 py-3 bg-white/90 dark:bg-gray-800/90 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200 resize-none"
+              placeholder="Décrivez brièvement votre projet..."
+            />
           </div>
 
           {/* Submit Status */}

@@ -4,10 +4,11 @@ import type { GeneratedQuote } from '../types/portfolio';
 export const generateQuotePDF = (quote: GeneratedQuote): void => {
   const doc = new jsPDF();
 
-  // Couleurs
-  const primaryColor: [number, number, number] = [59, 130, 246]; // Bleu primaire
-  const secondaryColor: [number, number, number] = [107, 114, 128]; // Gris
-  const accentColor: [number, number, number] = [34, 197, 94]; // Vert
+  // Couleurs de la palette verte
+  const primaryColor: [number, number, number] = [22, 163, 74]; // Vert primaire (primary-600)
+  const secondaryColor: [number, number, number] = [34, 197, 94]; // Vert accent (primary-500)
+  const darkGreen: [number, number, number] = [22, 101, 52]; // Vert foncé (primary-700)
+  const lightGreen: [number, number, number] = [187, 247, 208]; // Vert clair (primary-200)
 
   // Configuration de la page
   const pageWidth = doc.internal.pageSize.width;
@@ -36,13 +37,18 @@ export const generateQuotePDF = (quote: GeneratedQuote): void => {
     return y + (lines.length * lineHeight);
   };
 
-  // En-tête avec logo/branding
+  // En-tête avec logo/branding vert
   doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-  doc.rect(0, 0, pageWidth, 40, 'F');
+  doc.rect(0, 0, pageWidth, 50, 'F');
+
+  // Ajouter un dégradé vert
+  doc.setFillColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
+  doc.rect(0, 35, pageWidth, 15, 'F');
 
   doc.setTextColor(255, 255, 255);
-  centerText('DEVIS AUTOMATIQUE', 25, 16);
+  centerText('DEVIS AUTOMATIQUE', 20, 18);
   centerText('Portfolio Abdoulaye Diallo', 35, 12);
+  centerText('Développement Web & Mobile', 45, 10);
 
   currentY = 60;
 
@@ -60,8 +66,8 @@ export const generateQuotePDF = (quote: GeneratedQuote): void => {
   doc.text(`Date: ${quote.createdAt.toLocaleDateString('fr-FR')}`, pageWidth - margin - 60, currentY);
   currentY += 20;
 
-  // Section Client
-  doc.setFillColor(248, 250, 252);
+  // Section Client avec fond vert clair
+  doc.setFillColor(lightGreen[0], lightGreen[1], lightGreen[2]);
   doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 25, 'F');
 
   doc.setFontSize(12);
@@ -77,7 +83,7 @@ export const generateQuotePDF = (quote: GeneratedQuote): void => {
 
   // Section Projet
   currentY += 10;
-  doc.setFillColor(248, 250, 252);
+  doc.setFillColor(240, 253, 244); // Vert très clair
   doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 35, 'F');
 
   doc.setFontSize(12);
@@ -94,7 +100,7 @@ export const generateQuotePDF = (quote: GeneratedQuote): void => {
   currentY += 10;
 
   // Fonctionnalités incluses
-  doc.setFillColor(248, 250, 252);
+  doc.setFillColor(220, 252, 231); // Vert pâle
   doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 40, 'F');
 
   doc.setFontSize(12);
@@ -109,9 +115,9 @@ export const generateQuotePDF = (quote: GeneratedQuote): void => {
   });
   currentY += quote.features.length * 5 + 15;
 
-  // Estimation financière
-  doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-  doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 30, 'F');
+  // Estimation financière avec fond vert
+  doc.setFillColor(darkGreen[0], darkGreen[1], darkGreen[2]);
+  doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 35, 'F');
 
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(12);
@@ -143,16 +149,25 @@ export const generateQuotePDF = (quote: GeneratedQuote): void => {
 
   currentY += 15;
 
-  // Pied de page
-  const footerY = pageHeight - 30;
-  doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-  doc.line(margin, footerY, pageWidth - margin, footerY);
+  // Pied de page avec branding vert
+  const footerY = pageHeight - 35;
+  doc.setFillColor(lightGreen[0], lightGreen[1], lightGreen[2]);
+  doc.rect(margin, footerY - 5, pageWidth - 2 * margin, 30, 'F');
 
-  doc.setFontSize(8);
-  doc.setTextColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
-  centerText('Abdoulaye Diallo - Développeur Full Stack', footerY + 10);
-  centerText('Email: abdallahuix.dev@gmail.com | Tél: +221 78 291 7770', footerY + 15);
-  centerText(`Devis généré automatiquement le ${quote.createdAt.toLocaleDateString('fr-FR')}`, footerY + 20);
+  doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
+  doc.setLineWidth(0.5);
+  doc.line(margin, footerY - 5, pageWidth - margin, footerY - 5);
+
+  doc.setFontSize(9);
+  doc.setTextColor(darkGreen[0], darkGreen[1], darkGreen[2]);
+  centerText('Abdoulaye Diallo - Développeur Full Stack', footerY + 5);
+  centerText('Email: abdallahuix.dev@gmail.com | Tél: +221 78 291 7770', footerY + 12);
+  centerText(`Devis généré automatiquement le ${quote.createdAt.toLocaleDateString('fr-FR')}`, footerY + 19);
+
+  // Ajouter un petit élément décoratif vert
+  doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
+  doc.circle(margin + 10, footerY + 25, 2, 'F');
+  doc.circle(pageWidth - margin - 10, footerY + 25, 2, 'F');
 
   // Générer le nom du fichier
   const fileName = `devis-${quote.clientName.toLowerCase().replace(/\s+/g, '-')}-${quote.id}.pdf`;
@@ -164,9 +179,11 @@ export const generateQuotePDF = (quote: GeneratedQuote): void => {
 export const generateQuotePDFBlob = (quote: GeneratedQuote): Blob => {
   const doc = new jsPDF();
 
-  // Couleurs
-  const primaryColor: [number, number, number] = [59, 130, 246]; // Bleu primaire
-  const secondaryColor: [number, number, number] = [107, 114, 128]; // Gris
+  // Couleurs de la palette verte
+  const primaryColor: [number, number, number] = [22, 163, 74]; // Vert primaire (primary-600)
+  const secondaryColor: [number, number, number] = [34, 197, 94]; // Vert accent (primary-500)
+  const darkGreen: [number, number, number] = [22, 101, 52]; // Vert foncé (primary-700)
+  const lightGreen: [number, number, number] = [187, 247, 208]; // Vert clair (primary-200)
 
   // Configuration de la page
   const pageWidth = doc.internal.pageSize.width;
@@ -190,13 +207,18 @@ export const generateQuotePDFBlob = (quote: GeneratedQuote): Blob => {
     return y + (lines.length * lineHeight);
   };
 
-  // En-tête avec logo/branding
+  // En-tête avec logo/branding vert
   doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-  doc.rect(0, 0, pageWidth, 40, 'F');
+  doc.rect(0, 0, pageWidth, 50, 'F');
+
+  // Ajouter un dégradé vert
+  doc.setFillColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
+  doc.rect(0, 35, pageWidth, 15, 'F');
 
   doc.setTextColor(255, 255, 255);
-  centerText('DEVIS AUTOMATIQUE', 25, 16);
+  centerText('DEVIS AUTOMATIQUE', 20, 18);
   centerText('Portfolio Abdoulaye Diallo', 35, 12);
+  centerText('Développement Web & Mobile', 45, 10);
 
   currentY = 60;
 
@@ -214,8 +236,8 @@ export const generateQuotePDFBlob = (quote: GeneratedQuote): Blob => {
   doc.text(`Date: ${quote.createdAt.toLocaleDateString('fr-FR')}`, pageWidth - margin - 60, currentY);
   currentY += 20;
 
-  // Section Client
-  doc.setFillColor(248, 250, 252);
+  // Section Client avec fond vert clair
+  doc.setFillColor(lightGreen[0], lightGreen[1], lightGreen[2]);
   doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 25, 'F');
 
   doc.setFontSize(12);
@@ -231,7 +253,7 @@ export const generateQuotePDFBlob = (quote: GeneratedQuote): Blob => {
 
   // Section Projet
   currentY += 10;
-  doc.setFillColor(248, 250, 252);
+  doc.setFillColor(240, 253, 244); // Vert très clair
   doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 35, 'F');
 
   doc.setFontSize(12);
@@ -248,7 +270,7 @@ export const generateQuotePDFBlob = (quote: GeneratedQuote): Blob => {
   currentY += 10;
 
   // Fonctionnalités incluses
-  doc.setFillColor(248, 250, 252);
+  doc.setFillColor(220, 252, 231); // Vert pâle
   doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 40, 'F');
 
   doc.setFontSize(12);
@@ -263,9 +285,9 @@ export const generateQuotePDFBlob = (quote: GeneratedQuote): Blob => {
   });
   currentY += quote.features.length * 5 + 15;
 
-  // Estimation financière
-  doc.setFillColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-  doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 30, 'F');
+  // Estimation financière avec fond vert
+  doc.setFillColor(darkGreen[0], darkGreen[1], darkGreen[2]);
+  doc.rect(margin, currentY - 5, pageWidth - 2 * margin, 35, 'F');
 
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(12);
@@ -294,15 +316,19 @@ export const generateQuotePDFBlob = (quote: GeneratedQuote): Blob => {
     4
   );
 
-  // Pied de page
-  const footerY = doc.internal.pageSize.height - 30;
-  doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
-  doc.line(margin, footerY, pageWidth - margin, footerY);
+  // Pied de page avec branding vert
+  const footerY = doc.internal.pageSize.height - 35;
+  doc.setFillColor(lightGreen[0], lightGreen[1], lightGreen[2]);
+  doc.rect(margin, footerY - 5, pageWidth - 2 * margin, 30, 'F');
 
-  doc.setFontSize(8);
-  doc.setTextColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
-  centerText('Abdoulaye Diallo - Développeur Full Stack', footerY + 10);
-  centerText('Email: abdallahuix.dev@gmail.com | Tél: +221 78 291 7770', footerY + 15);
+  doc.setDrawColor(primaryColor[0], primaryColor[1], primaryColor[2]);
+  doc.setLineWidth(0.5);
+  doc.line(margin, footerY - 5, pageWidth - margin, footerY - 5);
+
+  doc.setFontSize(9);
+  doc.setTextColor(darkGreen[0], darkGreen[1], darkGreen[2]);
+  centerText('Abdoulaye Diallo - Développeur Full Stack', footerY + 5);
+  centerText('Email: abdallahuix.dev@gmail.com | Tél: +221 78 291 7770', footerY + 12);
 
   // Retourner le blob du PDF
   return doc.output('blob');
