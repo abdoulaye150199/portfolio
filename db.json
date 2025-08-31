@@ -9,15 +9,39 @@
     "avatar": "/img/moi.jpeg"
   },
   "skills": [
+
     { "id": 1, "name": "JavaScript", "level": 90, "category": "frontend" },
     { "id": 2, "name": "React", "level": 85, "category": "frontend" },
     { "id": 3, "name": "TypeScript", "level": 80, "category": "frontend" },
-    { "id": 4, "name": "Node.js", "level": 85, "category": "backend" },
-    { "id": 5, "name": "Express", "level": 75, "category": "backend" },
-{ "id": 6, "name": "PHP", "level": 75, "category": "backend" },
-    { "id": 7, "name": "MySQL", "level": 80, "category": "database" },
-    { "id": 8, "name": "Postgresql", "level": 70, "category": "database" },
-    { "id": 9, "name": "Tailwind CSS", "level": 90, "category": "frontend" }
+    { "id": 4, "name": "HTML/CSS", "level": 90, "category": "frontend" },
+    { "id": 5, "name": "TailwindCSS", "level": 90, "category": "frontend" },
+    
+    { "id": 6, "name": "Node.js", "level": 85, "category": "backend" },
+    { "id": 7, "name": "Express", "level": 75, "category": "backend" },
+    { "id": 8, "name": "PHP", "level": 75, "category": "backend" },
+    { "id": 9, "name": "Linux/Shell", "level": 70, "category": "backend" },
+    { "id": 10, "name": "C", "level": 65, "category": "backend" },
+    
+    { "id": 11, "name": "MySQL", "level": 80, "category": "database" },
+    { "id": 12, "name": "PostgreSQL", "level": 70, "category": "database" },
+    { "id": 13, "name": "JSON-Server", "level": 75, "category": "database" },
+    
+    { "id": 14, "name": "Figma", "level": 85, "category": "design" },
+    { "id": 15, "name": "Photoshop", "level": 80, "category": "design" },
+    { "id": 16, "name": "Illustrator", "level": 75, "category": "design" },
+    { "id": 17, "name": "Adobe XD", "level": 80, "category": "design" },
+    { "id": 18, "name": "Canva", "level": 85, "category": "design" },
+    
+    { "id": 19, "name": "Recherche utilisateur", "level": 85, "category": "uiux" },
+    { "id": 20, "name": "Wireframing", "level": 90, "category": "uiux" },
+    { "id": 21, "name": "Prototypage", "level": 85, "category": "uiux" },
+    { "id": 22, "name": "Design System", "level": 80, "category": "uiux" },
+    { "id": 23, "name": "Tests utilisateurs", "level": 75, "category": "uiux" },
+    { "id": 24, "name": "Personas", "level": 85, "category": "uiux" },
+    { "id": 25, "name": "Parcours utilisateur", "level": 85, "category": "uiux" },
+    { "id": 26, "name": "Cartographie d'expérience", "level": 80, "category": "uiux" },
+
+    { "id": 27, "name": "XML-UML", "level": 70, "category": "other" }
   ],
   "projects": [
     {
