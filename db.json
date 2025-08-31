@@ -110,19 +110,28 @@
     }
   ],
   "experience": [
-    {
+    
+
+      {
       "id": 1,
-      "company": "TechStart",
-      "position": "Développeur Full Stack Senior",
-      "period": "2022 - Présent",
-      "description": "Développement d'applications web complexes et encadrement d'équipe junior."
+      "company": "Freelance",
+      "position": "Développeur Fullstack",
+      "period": "2022 - Aujourd'hui",
+      "description": "Collaboration avec plusieur entreprise tech, proposition de plusieurs solutions numeriques uiux design, Developpement application web/mobile"
     },
-    {
+      {
       "id": 2,
       "company": "Digital Agency",
       "position": "Développeur Frontend",
-      "period": "2020 - 2022",
+      "period": "2023 - 2024",
       "description": "Création d'interfaces utilisateur pour des clients internationaux."
+    },
+    {
+      "id": 3,
+      "company": "SENECOP",
+      "position": "UI/UX Designer",
+      "period": "Août 2023 - Février 2024",
+      "description": "Conception UX/UI et recherche utilisateur en télétravail : réalisation d'ateliers de conception, création de prototypes web/mobile, analyse UX, méthodologies (personas, parcours utilisateur, cartographie d'expérience) et conception de services centrée utilisateur."
     }
   ]
 }
