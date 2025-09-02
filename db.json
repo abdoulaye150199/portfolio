@@ -42,7 +42,7 @@
     { "id": 25, "name": "Parcours utilisateur", "level": 85, "category": "uiux" },
     { "id": 26, "name": "Cartographie d'expérience", "level": 80, "category": "uiux" },
 
-    { "id": 27, "name": "XML-UML", "level": 70, "category": "other" }
+    { "id": 27, "name": "XML-UML", "level": 70, "category": "other" },
     { "id": 27, "name": "ZOD", "level": 70, "category": "other" }
   ],
   "projects": [
