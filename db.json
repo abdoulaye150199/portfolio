@@ -182,6 +182,12 @@
       "name": "ZOD",
       "level": 70,
       "category": "other"
+    },
+    {
+      "name": "Pack Adobe",
+      "level": 80,
+      "category": "design",
+      "id": 30
     }
   ],
   "projects": [
@@ -342,6 +348,13 @@
       "period": "2025",
       "description": "",
       "id": 4
+    },
+    {
+      "company": "BBC-Bocoum Business Company",
+      "position": "Designer Graphic",
+      "period": "2022-2023",
+      "description": "",
+      "id": 5
     }
   ]
 }
