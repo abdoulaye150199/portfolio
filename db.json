@@ -209,9 +209,9 @@
     },
     {
       "id": 2,
-      "title": "SEEK-IMMO",
+      "title": "TANZIL",
       "description": "Plateforme de commerce électronique complète avec gestion des produits, panier et paiements sécurisés.",
-      "image": "/img/SEEKimmo.png",
+      "image": "/img/tanzil.png",
       "technologies": [
         "",
         "Figma",
@@ -220,23 +220,23 @@
       ],
       "category": "UIUX-Design/UX Recherche",
       "github": "https://github.com",
-      "demo": "https://www.figma.com/proto/CxVsbS6ddTtIE2mWOEOCS7/My-Wallet?node-id=4-10&p=f&t=9SweNgCHldByMu5F-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+      "demo": "https://www.tanzilgroupe.com/accueil",
       "featured": true
     },
     {
       "id": 3,
-      "title": "Task Management App",
-      "description": "Un tableau de bord financier moderne et intuitif, conçu pour offrir une visualisation claire et interactive des comptes, transactions et statistiques en temps réel.",
+      "title": "FotoJay",
+      "description": "FotolDiay / Photol Dial vend tes produit ou que tu soit avec ton telephone",
       "image": "/img/dashboard.png",
       "technologies": [
-        "Vue.js",
-        "PHP",
+        "Angular.js",
+        "JAVA/Spring",
         "MySQL",
         "Socket.io"
       ],
       "category": "frontend",
       "github": "https://github.com",
-      "demo": "https://demo.com",
+      "demo": "https://www.marakhib-global.com/",
       "featured": true
     },
     {
@@ -266,31 +266,16 @@
         "Postgres"
       ],
       "category": "UIUX-Design/UX Recherche",
-      "github": "https://github.com",
+      "github": "https://github.com/abdoulaye150199",
       "demo": "https://www.figma.com/proto/CxVsbS6ddTtIE2mWOEOCS7/My-Wallet?node-id=4-10&p=f&t=9SweNgCHldByMu5F-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
       "featured": true
     },
-    {
-      "id": 6,
-      "title": "CareLine",
-      "description": "Une application simple et sécurisée pour acheter vos produits cosmétiques et pharmaceutiques de qualité, au meilleur prix et avec un suivi rapide.",
-      "image": "/img/Pharmcos.png",
-      "technologies": [
-        "",
-        "Figma",
-        "Photoshop",
-        "Canva"
-      ],
-      "category": "UIUX-Design/UX Recherche",
-      "github": "https://github.com",
-      "demo": "",
-      "featured": true
-    },
+
     {
       "id": 7,
       "title": "MediConnect+",
       "description": "MediConnect+ est une plateforme de télémédecine nouvelle génération intégrant l'intelligence artificielle pour révolutionner l'accès aux soins. Le projet vise à connecter patients et professionnels de santé via une solution digitale complète, sécurisée et intuitive.",
-      "image": "/img/frame 68.png",
+      "image": "/img/medi.png",
       "technologies": [
         "",
         "Figma",
@@ -298,25 +283,25 @@
         "Canva"
       ],
       "category": "UIUX-Design/UX Recherche",
-      "github": "https://github.com",
-      "demo": "https://www.figma.com/proto/CxVsbS6ddTtIE2mWOEOCS7/My-Wallet?node-id=4-10&p=f&t=9SweNgCHldByMu5F-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+      "github": "https://github.com/abdoulaye150199",
+      "demo": "https://www.figma.com/proto/m23JpJpJjYuC01aTc2eeAJ/MEDICAL-SITE?node-id=1-3&p=f&t=PtSrK8sQqjoYJfbx-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3",
       "featured": true
     },
     {
       "id": 8,
-      "title": "Gestion D'apprenant",
-      "description": "Une Application de gestion des apprenants de Orange Digital Center qui gere les promotions, les référentiels et les apprenants de l'école du code SA",
-      "image": "/img/apprenant.png",
+      "title": "Gestion Des Entreprise",
+      "description": "Un Saas Pour les Entreprises pour gerer la gestion des employés et des paiement",
+      "image": "/img/entreprise.png",
       "technologies": [
         "PHP",
-        "HTML",
+        "Typescript",
         "Tailwind",
         "JavaScript",
         "MySQL"
       ],
       "category": "frontend",
       "github": "https://github.com/abdoulaye150199/projet-ges-apprenant",
-      "demo": "",
+      "demo": "https://ges-entreprise-frontend-e6qf.vercel.app/",
       "featured": true
     },
      {
@@ -331,7 +316,7 @@
         "Canva"
       ],
       "category": "UIUX-Design/UX Recherche",
-      "github": "https://github.com",
+      "github": "https://github.com/abdoulaye150199",
       "demo": "https://www.figma.com/proto/3vDxncWoS4VSiUDBxGbPb5/EasyJo?node-id=46-1431&t=CI2TRkDUfhdc01X6-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A973",
       "featured": true
     }
