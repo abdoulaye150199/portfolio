@@ -241,7 +241,7 @@
     },
     {
       "id": 4,
-      "title": "YONI-MA LOGISTIQUE",
+      "title": "YONI-MA ",
       "description": "Une solution digitale innovante conçue pour optimiser le transport et la gestion des marchandises à l’échelle internationale. L’application permet de suivre, organiser et calculer automatiquement les frais des cargaisons (maritimes, aériennes et routières) tout en intégrant des règles intelligentes de gestion des produits (alimentaires, chimiques, matériels fragiles ou incassables).",
       "image": "/img/image.png",
       "technologies": [
@@ -250,20 +250,20 @@
         "NodeJS"
       ],
       "category": "fullstack",
-      "github": "https://github.com/abdoulaye150199/Yonima",
-      "demo": "https://demo.com",
+      "github": "https://github.com/abdoulaye150199",
+      "demo": "https://minibloom-sand.vercel.app/",
       "featured": false
     },
     {
       "id": 5,
       "title": "E-commerce Platform",
-      "description": "Plateforme de commerce électronique complète avec gestion des produits, panier et paiements sécurisés.",
-      "image": "/img/E-com.png",
+      "description": "Plateforme de commerce électronique complète de d'enfant avec gestion des produits, panier et paiements sécurisés.",
+      "image": "/img/mini.png",
       "technologies": [
         "",
-        "Figma",
-        "Photoshop",
-        "Canva"
+        "React",
+        "NodeJS",
+        "Postgres"
       ],
       "category": "UIUX-Design/UX Recherche",
       "github": "https://github.com",
