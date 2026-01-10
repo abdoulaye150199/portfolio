@@ -268,7 +268,7 @@
       ],
       "category": "fullstack",
       "github": "https://github.com/abdoulaye150199",
-      "demo": "https://minibloom-sand.vercel.app/",
+      "demo": "https://ges-entreprise-frontend-e6qf.vercel.app/",
       "featured": false
     },
     {
@@ -282,9 +282,9 @@
         "NodeJS",
         "Postgres"
       ],
-      "category": "UIUX-Design/UX Recherche",
+      "category": "Front-end",
       "github": "https://github.com/abdoulaye150199",
-      "demo": "https://www.figma.com/proto/CxVsbS6ddTtIE2mWOEOCS7/My-Wallet?node-id=4-10&p=f&t=9SweNgCHldByMu5F-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+      "demo": "https://minibloom-sand.vercel.app/",
       "featured": true
     },
 
@@ -333,6 +333,23 @@
         "Canva"
       ],
       "category": "UIUX-Design/UX Recherche",
+      "github": "https://github.com/abdoulaye150199",
+      "demo": "https://www.figma.com/proto/3vDxncWoS4VSiUDBxGbPb5/EasyJo?node-id=46-1431&t=CI2TRkDUfhdc01X6-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A973",
+      "featured": true
+    }
+    ,
+     {
+      "id": 10,
+      "title": "Gestion des salaires",
+      "description": "Gestion des salaires nouvelle génération Une plateforme intelligente qui transforme la gestion de vos employés et automatise vos processus de paie.",
+      "image": "/img/synergy.png",
+      "technologies": [
+        "",
+        "Spring microservices",
+        "MongoDB",
+        "React"
+      ],
+      "category": "Dev FullStack",
       "github": "https://github.com/abdoulaye150199",
       "demo": "https://www.figma.com/proto/3vDxncWoS4VSiUDBxGbPb5/EasyJo?node-id=46-1431&t=CI2TRkDUfhdc01X6-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A973",
       "featured": true
