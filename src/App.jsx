@@ -13,6 +13,7 @@ import Contact from './components/sections/Contact';
 export default function App() {
   const [ready, setReady] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
+  const recentProjects = [...portfolio.projects].reverse();
   useReveal();
 
   const finishIntro = useCallback(() => {
@@ -25,10 +26,10 @@ export default function App() {
     {showIntro && <Intro name={portfolio.profile.name} video={portfolio.hero.video} onDone={finishIntro} />}
     <Header name={portfolio.profile.name} avatar="/img/moi.png" navigation={portfolio.navigation} />
     <main>
-      <Hero ready={ready} content={portfolio.hero} profile={portfolio.profile} projects={portfolio.projects} />
+      <Hero ready={ready} content={portfolio.hero} profile={portfolio.profile} projects={recentProjects} />
       <About content={portfolio.about} bio={portfolio.profile.bio} />
       <Technologies technologies={portfolio.technologies} />
-      <Projects projects={portfolio.projects} />
+      <Projects projects={recentProjects} />
       <Experience experiences={portfolio.experiences} profile={portfolio.profile} />
       <Contact profile={portfolio.profile} />
     </main>

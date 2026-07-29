@@ -34,7 +34,7 @@
     "heading": "Du concept au code,",
     "accent": "je crée des expériences.",
     "years": "04+",
-    "projects": "12",
+    "projects": "11",
     "marquee": ["DESIGN", "DEVELOPMENT", "MOTION", "EXPERIENCE", "DESIGN", "DEVELOPMENT"]
   },
   "technologies": [
@@ -156,17 +156,6 @@
     },
     {
       "id": "08",
-      "name": "Gestion des entreprises",
-      "type": "PHP · TypeScript · Tailwind · MySQL",
-      "headline": ["Équipe.", "Activité.", "Pilotage."],
-      "year": "2025",
-      "color": "#c9b7ff",
-      "ink": "#100b1c",
-      "image": "/img/entreprise.png",
-      "url": "https://ges-entreprise-frontend-e6qf.vercel.app/"
-    },
-    {
-      "id": "09",
       "name": "EasyJo",
       "type": "Figma · Photoshop · UX Design",
       "headline": ["Culture.", "Visite.", "Mémoire."],
@@ -177,7 +166,7 @@
       "url": "https://www.figma.com/proto/3vDxncWoS4VSiUDBxGbPb5/EasyJo?node-id=46-1431&t=CI2TRkDUfhdc01X6-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A973"
     },
     {
-      "id": "10",
+      "id": "09",
       "name": "Gestion des salaires",
       "type": "Spring · Microservices · MongoDB · React",
       "headline": ["Paie.", "Équipe.", "Pilotage."],
@@ -188,7 +177,7 @@
       "url": "https://entreprise-peach.vercel.app/"
     },
     {
-      "id": "11",
+      "id": "10",
       "name": "BBK",
       "type": "Site vitrine · Design · Expérience digitale",
       "headline": ["Conseil.", "Technologie.", "Innovation."],
@@ -199,7 +188,7 @@
       "url": "https://bbk-sarl.vercel.app/"
     },
     {
-      "id": "12",
+      "id": "11",
       "name": "LiggeyPro",
       "type": "Angular · Node.js · Flutter",
       "headline": ["Web.", "API.", "Mobile."],

@@ -28,6 +28,8 @@
 .featured-tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,5,10,.28),rgba(4,5,10,.12) 35%,rgba(4,5,10,.78))}
 .featured-visual>span,.featured-visual>strong,.featured-visual>small,.featured-visual>.project-dots{position:relative;z-index:2}
 .featured.changing .featured-visual>img{opacity:.35}
+.featured-visual>img{filter:none}
+.featured-visual>.project-dots{position:absolute;z-index:3;left:16px;bottom:16px;padding:7px 9px;margin:0;border-radius:99px;background:#05060a99;backdrop-filter:blur(8px)}
 
 /* Complete skills grid with brand icons. */
 .tech-grid{grid-template-columns:repeat(5,1fr)}
@@ -154,4 +156,24 @@
   .work footer h3{font-size:20px}
   .work footer small{display:block;max-width:58vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .skills-toggle{margin-top:24px}
+}
+
+/* Keep project headlines anchored to the bottom of every visual. */
+.work-visual>strong{bottom:28px}
+@media(max-width:650px){.work-visual>strong{bottom:18px}}
+
+/* Desktop scroll-driven horizontal technology showcase. */
+.tech-horizontal{position:relative;padding:0;overflow:visible}
+.tech-sticky{position:sticky;top:0;height:100svh;padding:clamp(72px,10vh,110px) var(--pad) 28px;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
+.tech-horizontal .tech-heading{margin:clamp(32px,6vh,68px) 0 clamp(28px,5vh,54px)}
+.tech-horizontal .tech-grid{width:max-content;display:flex;grid-template-columns:none;gap:12px;will-change:transform}
+.tech-horizontal .tech-card{width:clamp(260px,19vw,310px);flex:0 0 clamp(260px,19vw,310px)}
+.tech-horizontal .skills-toggle{position:absolute;right:var(--pad);bottom:24px;margin:0}
+@media(max-width:650px){
+  .tech-horizontal{height:auto!important;overflow:hidden}
+  .tech-sticky{position:relative;top:auto;height:auto;min-height:100svh;padding:100px 20px;overflow:visible}
+  .tech-horizontal .tech-heading{margin:65px 0 50px}
+  .tech-horizontal .tech-grid{width:calc(100% + 20px);display:flex;gap:12px;will-change:auto;transform:none!important}
+  .tech-horizontal .tech-card{width:auto;flex:0 0 78vw}
+  .tech-horizontal .skills-toggle{position:relative;right:auto;bottom:auto;margin:24px auto 0}
 }

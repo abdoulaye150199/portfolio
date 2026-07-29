@@ -34,13 +34,9 @@ export default function FeaturedProject({ projects }) {
   >
     <div className="featured-visual" style={{ background: project.color, color: project.ink }}>
       <img src={project.image} alt={`Aperçu du projet ${project.name}`} />
-      <div className="featured-tint" />
-      <span>{project.type}</span>
       <div className="project-dots">
         {projects.map(({ id }, projectIndex) => <i className={projectIndex === index ? 'active' : ''} key={id} />)}
       </div>
-      <strong>{project.headline.map((line) => <span key={line}>{line}</span>)}</strong>
-      <small>{project.name.toUpperCase()} / {project.year}</small>
     </div>
     <footer><span>Découvrir {project.name}</span><b>↗</b></footer>
   </a>;

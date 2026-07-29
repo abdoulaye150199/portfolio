@@ -9,9 +9,6 @@ export default function Projects({ projects }) {
         <article className="work" data-reveal key={project.id} style={{ '--card': project.color, '--ink': project.ink }}>
           <div className="work-visual">
             <img src={project.image} alt={`Aperçu du projet ${project.name}`} loading="lazy" />
-            <div className="work-tint" />
-            <span>{project.id} / {project.year}</span>
-            <strong>{project.headline.map((line) => <span key={line}>{line}</span>)}</strong>
           </div>
           <footer>
             <div><small>{project.type}</small><h3>{project.name}</h3></div>
