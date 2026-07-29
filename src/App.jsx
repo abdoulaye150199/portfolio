@@ -23,7 +23,7 @@ export default function App() {
   return <>
     <div className="noise" />
     {showIntro && <Intro name={portfolio.profile.name} video={portfolio.hero.video} onDone={finishIntro} />}
-    <Header name={portfolio.profile.name} navigation={portfolio.navigation} />
+    <Header name={portfolio.profile.name} avatar="/img/moi.png" navigation={portfolio.navigation} />
     <main>
       <Hero ready={ready} content={portfolio.hero} profile={portfolio.profile} projects={portfolio.projects} />
       <About content={portfolio.about} bio={portfolio.profile.bio} />

@@ -48,3 +48,55 @@
 .skills-toggle:hover{background:#fff;color:#090a0f;transform:translateY(-2px)}
 .skills-toggle span{font-size:12px}
 .skills-toggle b{width:38px;height:38px;display:grid;place-items:center;border:1px solid currentColor;border-radius:50%}
+
+/* Floating navigation: compact while scrolling, expanded on hover/focus. */
+.header{position:fixed;z-index:90;top:14px;left:50%;width:calc(100% - 28px);max-width:1380px;height:64px;padding:7px 10px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;border:1px solid #ffffff16;border-radius:34px;background:#090a0de8;box-shadow:0 14px 50px #0007;backdrop-filter:blur(20px);transform:translateX(-50%);transition:width .55s cubic-bezier(.16,1,.3,1),max-width .55s cubic-bezier(.16,1,.3,1),background .3s,border-color .3s}
+.header.is-collapsed{width:min(440px,calc(100% - 24px));grid-template-columns:1fr auto;gap:12px;background:#07080af2}
+.header:hover,.header:focus-within{border-color:#ffffff2b}
+.logo{min-width:max-content;display:flex;align-items:center;gap:11px;font-weight:500;letter-spacing:-.025em}
+.logo>span:last-child{padding-right:8px}
+.nav-avatar{position:relative;width:48px;height:48px;flex:0 0 48px}
+.nav-avatar img{width:100%;height:100%;display:block;object-fit:cover;border:2px solid #ffffff24;border-radius:50%}
+.nav-avatar i{position:absolute;right:1px;bottom:2px;width:9px;height:9px;margin:0;border:2px solid #090a0d;border-radius:50%;background:var(--acid);box-shadow:none}
+.header nav{justify-self:center;overflow:hidden;white-space:nowrap;opacity:1;transition:opacity .2s,max-width .5s cubic-bezier(.16,1,.3,1)}
+.header.is-collapsed nav{max-width:0;opacity:0;pointer-events:none}
+.nav-status{display:none;align-items:center;gap:5px;padding:0 14px}
+.header.is-collapsed .nav-status{display:flex}
+.nav-status i{width:6px;height:6px;border-radius:50%;background:#5d921e}
+.header .menu{margin-right:5px}
+
+@media(max-width:900px){
+  .header{top:10px;height:60px;width:calc(100% - 20px);padding:6px 8px;grid-template-columns:1fr auto;gap:8px}
+  .header.is-collapsed{width:calc(100% - 20px)}
+  .nav-avatar{width:46px;height:46px;flex-basis:46px}
+  .header .nav-status{display:none}
+  .header .menu{display:block}
+  .header nav{position:fixed;inset:70px 10px auto;padding:28px;border:1px solid #ffffff18;border-radius:24px;background:#08090df5;backdrop-filter:blur(20px);flex-direction:column;transform:translateY(-140%);opacity:0;max-width:none;pointer-events:none}
+  .header nav.open{transform:none;opacity:1;pointer-events:auto}
+  .header.is-collapsed nav.open{max-width:none}
+}
+
+/* Personal contact visual replacing the decorative sphere. */
+.contact-portrait{position:absolute;z-index:1;right:5vw;top:14%;width:min(38vw,560px);height:68%;overflow:hidden;border:1px solid #ffffff24;border-radius:32px;transform:rotate(2deg);box-shadow:0 35px 100px #000b;animation:portraitFloat 6s ease-in-out infinite}
+.contact-portrait::before{content:'';position:absolute;z-index:3;inset:14px;border:1px solid #ffffff20;border-radius:23px;pointer-events:none}
+.contact-portrait img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 34%;filter:saturate(.75) contrast(1.06)}
+.contact-portrait-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,9,14,.04) 45%,rgba(8,9,14,.86)),linear-gradient(90deg,rgba(65,43,170,.24),transparent 50%)}
+.contact-portrait>span{position:absolute;z-index:4;left:30px;right:30px;bottom:28px;padding:13px 17px;display:flex;align-items:center;gap:10px;border:1px solid #ffffff28;border-radius:99px;background:#08090cb8;backdrop-filter:blur(14px);font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.contact-portrait>span i{width:8px;height:8px;border-radius:50%;background:var(--acid);box-shadow:0 0 14px var(--acid)}
+.contact-rings{position:absolute;z-index:3;right:-95px;top:-95px;width:280px;height:280px;pointer-events:none;animation:ringsTurn 16s linear infinite}
+.contact-rings i{position:absolute;inset:0;border:1px solid #b8ff5c55;border-radius:50%}
+.contact-rings i:nth-child(2){inset:34px;border-style:dashed;border-color:#9d8aff88}
+.contact-rings i:nth-child(3){inset:78px;border-color:#ffffff52}
+.contact-rings::after{content:'';position:absolute;left:50%;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--acid);box-shadow:0 0 22px var(--acid)}
+.contact-scan{position:absolute;z-index:3;left:0;right:0;top:-20%;height:24%;background:linear-gradient(180deg,transparent,rgba(184,255,92,.18),transparent);mix-blend-mode:screen;animation:portraitScan 4.5s ease-in-out infinite}
+.contact-portrait>span>i{animation:statusPulse 1.8s ease-in-out infinite}
+@keyframes portraitFloat{0%,100%{transform:rotate(2deg) translateY(0)}50%{transform:rotate(.5deg) translateY(-14px)}}
+@keyframes ringsTurn{to{transform:rotate(360deg)}}
+@keyframes portraitScan{0%{top:-25%}70%,100%{top:110%}}
+@keyframes statusPulse{50%{opacity:.45;transform:scale(.72)}}
+@media(max-width:900px){
+  .contact-portrait{right:-15%;top:17%;width:72vw;height:58%;opacity:.35}
+  .contact-portrait>span{display:none}
+}
+@media(max-width:520px){.contact-portrait{right:-38%;width:100vw}}
+@media(prefers-reduced-motion:reduce){.contact-portrait,.contact-rings,.contact-scan,.contact-portrait>span>i{animation:none!important}}
