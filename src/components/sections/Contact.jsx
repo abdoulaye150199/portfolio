@@ -1,13 +1,31 @@
 import SectionLabel from '../ui/SectionLabel';
 
+const cubes = [
+  ['-95px', '-95px', '-55px', '-38px', '-28deg'],
+  ['0px', '-95px', '22px', '-70px', '34deg'],
+  ['95px', '-95px', '68px', '-24px', '18deg'],
+  ['-95px', '0px', '-76px', '8px', '42deg'],
+  ['0px', '0px', '8px', '36px', '-18deg'],
+  ['95px', '0px', '82px', '15px', '48deg'],
+  ['-95px', '95px', '-58px', '65px', '-38deg'],
+  ['0px', '95px', '24px', '78px', '26deg'],
+  ['95px', '95px', '72px', '58px', '-22deg']
+];
+
 export default function Contact({ profile }) {
   return <section className="contact section" id="contact">
     <div className="contact-portrait">
-      <img src="/img/moi.png" alt="Abdoulaye Diallo dans son espace de travail" loading="lazy" />
-      <div className="contact-portrait-shade" />
-      <div className="contact-rings" aria-hidden="true"><i /><i /><i /></div>
-      <div className="contact-scan" aria-hidden="true" />
-      <span><i />Disponible pour collaborer</span>
+      <div className="cube-field" aria-label="Illustration interactive de cubes">
+        {cubes.map(([x, y, dx, dy, rotation], index) => (
+          <i
+            className="contact-cube"
+            key={`${x}-${y}`}
+            style={{ '--x': x, '--y': y, '--dx': dx, '--dy': dy, '--rotation': rotation, '--delay': `${index * 0.025}s` }}
+          >
+            <b /><b /><b />
+          </i>
+        ))}
+      </div>
     </div>
     <SectionLabel number="05">Contact</SectionLabel>
     <p data-reveal>Vous avez un projet en tête ?</p>

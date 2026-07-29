@@ -100,3 +100,27 @@
 }
 @media(max-width:520px){.contact-portrait{right:-38%;width:100vw}}
 @media(prefers-reduced-motion:reduce){.contact-portrait,.contact-rings,.contact-scan,.contact-portrait>span>i{animation:none!important}}
+
+/* Interactive 3D cube illustration in the contact section. */
+.contact-portrait{background:radial-gradient(circle at 62% 35%,#765cff35,transparent 42%),linear-gradient(145deg,#11131a,#08090d);perspective:900px}
+.cube-field{position:absolute;inset:0;z-index:2;transform-style:preserve-3d}
+.cube-field::before{content:'';position:absolute;inset:0;opacity:.18;background-image:linear-gradient(#8d7cff55 1px,transparent 1px),linear-gradient(90deg,#8d7cff55 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(transparent,black 25%,black 75%,transparent)}
+.contact-cube{position:absolute;left:calc(50% + var(--x));top:calc(45% + var(--y));width:58px;height:58px;display:block;transform-style:preserve-3d;transform:translate(-50%,-50%) rotateX(-24deg) rotateY(38deg) rotateZ(0);transition:transform .8s var(--delay) cubic-bezier(.16,1,.3,1),left .8s var(--delay) cubic-bezier(.16,1,.3,1),top .8s var(--delay) cubic-bezier(.16,1,.3,1)}
+.contact-cube b{position:absolute;inset:0;display:block;border:1px solid #ffffff45;backface-visibility:hidden}
+.contact-cube b:nth-child(1){background:linear-gradient(145deg,#8d79ff,#6045df);transform:translateZ(29px)}
+.contact-cube b:nth-child(2){background:linear-gradient(145deg,#4c36b5,#2b206d);transform:rotateY(90deg) translateZ(29px)}
+.contact-cube b:nth-child(3){background:linear-gradient(145deg,#b8ff5c,#69a522);transform:rotateX(90deg) translateZ(29px)}
+.contact-portrait:hover .contact-cube{left:calc(50% + var(--x) + var(--dx));top:calc(45% + var(--y) + var(--dy));transform:translate(-50%,-50%) rotateX(-38deg) rotateY(55deg) rotateZ(var(--rotation)) scale(.88)}
+.contact-portrait:hover .contact-rings{animation-duration:5s}
+.contact-portrait:hover .contact-scan{animation-duration:2.2s}
+@media(max-width:900px){
+  .contact-cube{width:46px;height:46px}
+  .contact-cube b:nth-child(1){transform:translateZ(23px)}
+  .contact-cube b:nth-child(2){transform:rotateY(90deg) translateZ(23px)}
+  .contact-cube b:nth-child(3){transform:rotateX(90deg) translateZ(23px)}
+}
+@media(prefers-reduced-motion:reduce){.contact-cube{transition:none}.contact-portrait:hover .contact-cube{left:calc(50% + var(--x));top:calc(45% + var(--y));transform:translate(-50%,-50%) rotateX(-24deg) rotateY(38deg)}}
+
+/* Keep the contact illustration intentionally minimal: cubes only. */
+.contact-portrait{overflow:visible;border:0;background:none;box-shadow:none;backdrop-filter:none}
+.contact-portrait::before,.cube-field::before{display:none}
