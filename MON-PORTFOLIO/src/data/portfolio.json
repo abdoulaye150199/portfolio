@@ -1,0 +1,234 @@
+{
+  "profile": {
+    "name": "Abdoulaye Diallo",
+    "title": "Développeur Full Stack / Designer UI/UX",
+    "bio": "Développeur Fullstack, UI/UX designer et graphiste, je transforme des besoins complexes en applications performantes et interfaces intuitives. J’interviens sur toute la chaîne, de la recherche utilisateur au déploiement.",
+    "location": "Dakar, Sénégal",
+    "coordinates": "14.7167° N · 17.4677° W",
+    "availability": "Disponible",
+    "email": "abdallahdev.uix@gmail.com",
+    "phones": [
+      { "label": "+221 78 291 77 70", "href": "tel:+221782917770" },
+      { "label": "+221 76 483 14 41", "href": "tel:+221764831441" }
+    ],
+    "socials": [
+      { "label": "GitHub", "url": "https://github.com/abdoulaye150199" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/abdoulaye-diallo-gl-uiuxdesigner" }
+    ]
+  },
+  "navigation": [
+    { "label": "Accueil", "target": "home" },
+    { "label": "À propos", "target": "about" },
+    { "label": "Technologies", "target": "technologies" },
+    { "label": "Projets", "target": "projets" },
+    { "label": "Parcours", "target": "parcours" },
+    { "label": "Contact", "target": "contact" }
+  ],
+  "hero": {
+    "video": "/assets/hero-video.mp4",
+    "kicker": "Fullstack developer · UI/UX designer · Dakar",
+    "lines": ["Je conçois.", "Je développe.", "Je déploie."],
+    "cta": "Contactez-moi"
+  },
+  "about": {
+    "heading": "Du concept au code,",
+    "accent": "je crée des expériences.",
+    "years": "04+",
+    "projects": "13",
+    "marquee": ["DESIGN", "DEVELOPMENT", "MOTION", "EXPERIENCE", "DESIGN", "DEVELOPMENT"]
+  },
+  "technologies": [
+    { "name": "JavaScript", "category": "Frontend", "icon": "https://cdn.simpleicons.org/javascript" },
+    { "name": "React", "category": "Frontend", "icon": "https://cdn.simpleicons.org/react", "featured": true },
+    { "name": "TypeScript", "category": "Frontend", "icon": "https://cdn.simpleicons.org/typescript", "featured": true },
+    { "name": "HTML5", "category": "Frontend", "icon": "https://cdn.simpleicons.org/html5" },
+    { "name": "CSS3", "category": "Frontend", "icon": "https://cdn.simpleicons.org/css" },
+    { "name": "Tailwind CSS", "category": "Frontend", "icon": "https://cdn.simpleicons.org/tailwindcss" },
+    { "name": "Angular", "category": "Frontend", "icon": "https://cdn.simpleicons.org/angular", "featured": true },
+    { "name": "Node.js", "category": "Backend", "icon": "https://cdn.simpleicons.org/nodedotjs", "featured": true },
+    { "name": "Express", "category": "Backend", "icon": "https://cdn.simpleicons.org/express/ffffff" },
+    { "name": "Java", "category": "Backend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", "featured": true },
+    { "name": "Spring", "category": "Backend", "icon": "https://cdn.simpleicons.org/spring", "featured": true },
+    { "name": "PHP", "category": "Backend", "icon": "https://cdn.simpleicons.org/php" },
+    { "name": "Flutter", "category": "Mobile", "icon": "https://cdn.simpleicons.org/flutter", "featured": true },
+    { "name": "Dart", "category": "Mobile", "icon": "https://cdn.simpleicons.org/dart" },
+    { "name": "Linux / Shell", "category": "Outils", "icon": "https://cdn.simpleicons.org/linux/ffffff" },
+    { "name": "C", "category": "Backend", "icon": "https://cdn.simpleicons.org/c" },
+    { "name": "MySQL", "category": "Base de données", "icon": "https://cdn.simpleicons.org/mysql" },
+    { "name": "PostgreSQL", "category": "Base de données", "icon": "https://cdn.simpleicons.org/postgresql", "featured": true },
+    { "name": "JSON Server", "category": "Base de données", "icon": "https://cdn.simpleicons.org/json/ffffff" },
+    { "name": "Prisma", "category": "Base de données", "icon": "https://cdn.simpleicons.org/prisma/ffffff" },
+    { "name": "MongoDB", "category": "Base de données", "icon": "https://cdn.simpleicons.org/mongodb" },
+    { "name": "Figma", "category": "Design", "icon": "https://cdn.simpleicons.org/figma", "featured": true },
+    { "name": "Photoshop", "category": "Design", "icon": "https://cdn.simpleicons.org/adobephotoshop" },
+    { "name": "Illustrator", "category": "Design", "icon": "https://cdn.simpleicons.org/adobeillustrator" },
+    { "name": "Adobe XD", "category": "Design", "icon": "https://cdn.simpleicons.org/adobexd" },
+    { "name": "Canva", "category": "Design", "icon": "https://cdn.simpleicons.org/canva" },
+    { "name": "Pack Adobe", "category": "Design", "icon": "https://cdn.simpleicons.org/adobe" },
+    { "name": "Recherche utilisateur", "category": "UI/UX", "icon": "https://cdn.simpleicons.org/googleanalytics", "featured": true },
+    { "name": "Wireframing", "category": "UI/UX", "icon": "https://cdn.simpleicons.org/figma" },
+    { "name": "Prototypage", "category": "UI/UX", "icon": "https://cdn.simpleicons.org/protoio" },
+    { "name": "Design System", "category": "UI/UX", "icon": "https://cdn.simpleicons.org/storybook" },
+    { "name": "Tests utilisateurs", "category": "UI/UX", "icon": "https://cdn.simpleicons.org/testcafe" },
+    { "name": "Personas", "category": "UI/UX", "icon": "https://cdn.simpleicons.org/aboutdotme" },
+    { "name": "Parcours utilisateur", "category": "UI/UX", "icon": "https://cdn.simpleicons.org/miro" },
+    { "name": "Cartographie d’expérience", "category": "UI/UX", "icon": "https://cdn.simpleicons.org/miro" },
+    { "name": "UML / XML", "category": "Outils", "icon": "https://cdn.simpleicons.org/uml" },
+    { "name": "Zod", "category": "Outils", "icon": "https://cdn.simpleicons.org/zod" }
+  ],
+  "projects": [
+    {
+      "id": "01",
+      "name": "DCIR",
+      "type": "Figma · Photoshop · User Research",
+      "headline": ["Penser.", "Designer.", "Simplifier."],
+      "year": "2025",
+      "color": "#dcdcd6",
+      "ink": "#0a0b10",
+      "image": "/img/AccueilDCIR.png",
+      "url": "https://www.figma.com/proto/7BkUmnqPfhUvaDXKRYXhQn/Ges-Courrier?node-id=0-1&p=f&t=ln2HwpkfGBnXW0sK-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A882&show-proto-sidebar=1"
+    },
+    {
+      "id": "02",
+      "name": "My-Wallet",
+      "type": "Figma · Photoshop · Canva",
+      "headline": ["Payer.", "Transférer.", "Suivre."],
+      "year": "2025",
+      "color": "#b8ff5c",
+      "ink": "#11150c",
+      "image": "/img/mockup.png",
+      "url": "https://www.figma.com/proto/CxVsbS6ddTtIE2mWOEOCS7/My-Wallet?node-id=4-10&p=f&t=9SweNgCHldByMu5F-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2"
+    },
+    {
+      "id": "03",
+      "name": "Gestion des comptes",
+      "type": "Java · Spring · PostgreSQL · Microservices",
+      "headline": ["API.", "Comptes.", "Sécurité."],
+      "year": "2025",
+      "color": "#765cff",
+      "ink": "#ffffff",
+      "image": "/img/swagger.png",
+      "url": "https://github.com/abdoulaye150199"
+    },
+    {
+      "id": "04",
+      "name": "TANZIL",
+      "type": "Figma · Photoshop · Canva",
+      "headline": ["Shop.", "Marque.", "Expérience."],
+      "year": "2025",
+      "color": "#f1a6cd",
+      "ink": "#121018",
+      "image": "/img/tanzil.png",
+      "url": "https://www.tanzilgroupe.com/accueil"
+    },
+    {
+      "id": "05",
+      "name": "FotoJay",
+      "type": "Angular · Spring · MySQL · Socket.io",
+      "headline": ["Vendre.", "Gérer.", "Grandir."],
+      "year": "2025",
+      "color": "#ffd56a",
+      "ink": "#15120a",
+      "image": "/img/dashboard.png",
+      "url": "https://www.marakhib-global.com/"
+    },
+    {
+      "id": "06",
+      "name": "YONI-MA",
+      "type": "JavaScript · Node.js · API",
+      "headline": ["Transport.", "Calcul.", "Suivi."],
+      "year": "2025",
+      "color": "#91d8ff",
+      "ink": "#07131a",
+      "image": "/img/image.png",
+      "url": "https://ges-entreprise-frontend-e6qf.vercel.app/"
+    },
+    {
+      "id": "07",
+      "name": "MiniBloom",
+      "type": "React · Node.js · PostgreSQL",
+      "headline": ["Jouer.", "Choisir.", "Commander."],
+      "year": "2025",
+      "color": "#ff9d7c",
+      "ink": "#180b07",
+      "image": "/img/mini.png",
+      "url": "https://minibloom-sand.vercel.app/"
+    },
+    {
+      "id": "08",
+      "name": "MediConnect+",
+      "type": "Figma · UX Research · Prototypage",
+      "headline": ["Soigner.", "Relier.", "Assister."],
+      "year": "2025",
+      "color": "#8ee5ce",
+      "ink": "#071713",
+      "image": "/img/medi.png",
+      "url": "https://www.figma.com/proto/m23JpJpJjYuC01aTc2eeAJ/MEDICAL-SITE?node-id=1-3&p=f&t=PtSrK8sQqjoYJfbx-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3"
+    },
+    {
+      "id": "09",
+      "name": "Gestion des entreprises",
+      "type": "PHP · TypeScript · Tailwind · MySQL",
+      "headline": ["Équipe.", "Activité.", "Pilotage."],
+      "year": "2025",
+      "color": "#c9b7ff",
+      "ink": "#100b1c",
+      "image": "/img/entreprise.png",
+      "url": "https://ges-entreprise-frontend-e6qf.vercel.app/"
+    },
+    {
+      "id": "10",
+      "name": "EasyJo",
+      "type": "Figma · Photoshop · UX Design",
+      "headline": ["Culture.", "Visite.", "Mémoire."],
+      "year": "2025",
+      "color": "#e7e1d4",
+      "ink": "#15130f",
+      "image": "/img/Musé.png",
+      "url": "https://www.figma.com/proto/3vDxncWoS4VSiUDBxGbPb5/EasyJo?node-id=46-1431&t=CI2TRkDUfhdc01X6-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A973"
+    },
+    {
+      "id": "11",
+      "name": "Gestion des salaires",
+      "type": "Spring · Microservices · MongoDB · React",
+      "headline": ["Paie.", "Équipe.", "Pilotage."],
+      "year": "2025",
+      "color": "#b8ff5c",
+      "ink": "#10150a",
+      "image": "/img/synergy.png",
+      "url": "https://entreprise-peach.vercel.app/"
+    },
+    {
+      "id": "12",
+      "name": "BBK",
+      "type": "Site vitrine · Design · Expérience digitale",
+      "headline": ["Conseil.", "Technologie.", "Innovation."],
+      "year": "2025",
+      "color": "#11110f",
+      "ink": "#ffffff",
+      "image": "/img/BBK.png",
+      "url": "https://bbk-sarl.vercel.app/"
+    },
+    {
+      "id": "13",
+      "name": "LiggeyPro",
+      "type": "Angular · Node.js · Flutter",
+      "headline": ["Web.", "API.", "Mobile."],
+      "year": "2025",
+      "color": "#f2b84b",
+      "ink": "#15110a",
+      "image": "/img/samaservice.png",
+      "url": "https://www.liggeypro.com/"
+    }
+  ],
+  "experiences": [
+    { "date": "2025", "role": "Superviseur UX", "place": "BBK", "text": "Supervision de la stratégie UX, amélioration des expériences utilisateur et direction des équipes de conception." },
+    { "date": "2024 — 2025", "role": "UI/UX Designer freelance", "place": "Ma Santé Assurance", "text": "Recherche utilisateur et conception d’une application d’assurance santé innovante pour mobile et web." },
+    { "date": "2025", "role": "UI/UX Designer", "place": "Projet DCIR", "text": "Création de prototypes, conception UX/UI et direction artistique du produit." },
+    { "date": "Depuis 2022", "role": "Développeur Fullstack", "place": "Freelance", "text": "Solutions numériques, design UI/UX et développement d’applications web et mobiles pour plusieurs entreprises." },
+    { "date": "2023 — 2024", "role": "Développeur Frontend", "place": "Digital Agency", "text": "Création d’interfaces utilisateur pour des clients internationaux." },
+    { "date": "Août 2023 — Fév. 2024", "role": "UI/UX Designer", "place": "SENECOP", "text": "Ateliers de conception, prototypes web/mobile, personas, parcours utilisateur et cartographie d’expérience." },
+    { "date": "2025", "role": "Développeur Fullstack", "place": "BKS", "text": "Conception et développement de solutions numériques fullstack." },
+    { "date": "2022 — 2023", "role": "Designer graphique", "place": "BBC — Bocoum Business Company", "text": "Création de supports visuels et d’identités graphiques." }
+  ]
+}
