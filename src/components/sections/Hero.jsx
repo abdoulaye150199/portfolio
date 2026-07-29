@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import FeaturedProject from '../projects/FeaturedProject';
+import { scrollToSection } from '../../utils/navigation';
 
 export default function Hero({ ready, content, profile, projects }) {
   const media = useRef();
@@ -26,11 +27,11 @@ export default function Hero({ ready, content, profile, projects }) {
         <h1>{content.lines.map((line, index) => (
           <span key={line} style={{ '--d': `${index * 0.08}s` }}><b>{line}</b></span>
         ))}</h1>
-        <a className="pill" href="#contact">{content.cta}<b>↗</b></a>
+        <a className="pill" href="#contact" onClick={(event) => scrollToSection(event, 'contact')}>{content.cta}<b>↗</b></a>
       </div>
       <FeaturedProject projects={projects.slice(0, 3)} />
       <span className="coordinates">{profile.coordinates}</span>
     </div>
-    <a className="about-tab" href="#about">À propos <span>↓</span></a>
+    <a className="about-tab" href="#about" onClick={(event) => scrollToSection(event, 'about')}>À propos <span>↓</span></a>
   </section>;
 }

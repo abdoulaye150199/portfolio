@@ -1,4 +1,5 @@
 import SectionLabel from '../ui/SectionLabel';
+import { scrollToSection } from '../../utils/navigation';
 
 const cubes = [
   ['-95px', '-95px', '-55px', '-38px', '-28deg'],
@@ -40,7 +41,7 @@ export default function Contact({ profile }) {
     <footer>
       <span>© 2026 {profile.name}</span>
       <span>{profile.location} · {profile.availability}</span>
-      <a href="#home">Retour en haut ↑</a>
+      <a href="#home" onClick={(event) => scrollToSection(event, 'home')}>Retour en haut ↑</a>
     </footer>
   </section>;
 }

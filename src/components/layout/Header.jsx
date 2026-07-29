@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { scrollToSection } from '../../utils/navigation';
 
 export default function Header({ name, avatar, navigation }) {
   const [open, setOpen] = useState(false);
@@ -23,13 +24,22 @@ export default function Header({ name, avatar, navigation }) {
       if (!event.currentTarget.contains(event.relatedTarget)) setHovered(false);
     }}
   >
-    <a className="logo" href="#home">
+    <a className="logo" href="#home" onClick={(event) => scrollToSection(event, 'home')}>
       <span className="nav-avatar"><img src={avatar} alt="" /><i /></span>
       <span>{name}</span>
     </a>
     <nav className={open ? 'open' : ''}>
       {navigation.map(({ label, target }) => (
-        <a key={target} href={`#${target}`} onClick={() => setOpen(false)}>{label}</a>
+        <a
+          key={target}
+          href={`#${target}`}
+          onClick={(event) => {
+            scrollToSection(event, target);
+            setOpen(false);
+          }}
+        >
+          {label}
+        </a>
       ))}
     </nav>
     <div className="nav-status" aria-hidden="true"><i /><i /><i /></div>
