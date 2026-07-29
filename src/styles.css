@@ -124,3 +124,34 @@
 /* Keep the contact illustration intentionally minimal: cubes only. */
 .contact-portrait{overflow:visible;border:0;background:none;box-shadow:none;backdrop-filter:none}
 .contact-portrait::before,.cube-field::before{display:none}
+
+/* Touch-first horizontal carousels on phones. */
+@media(max-width:650px){
+  body{padding-top:env(safe-area-inset-top)}
+  .header{top:max(10px,env(safe-area-inset-top))}
+  .tech,.works{overflow:hidden}
+  .tech-grid,.work-list{
+    width:calc(100% + 20px);
+    margin-right:-20px;
+    padding:4px 20px 22px 0;
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-padding-left:0;
+    overscroll-behavior-inline:contain;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .tech-grid::-webkit-scrollbar,.work-list::-webkit-scrollbar{display:none}
+  .tech-card{min-width:0;flex:0 0 78vw;height:185px;scroll-snap-align:start;scroll-snap-stop:always}
+  .work-list{gap:16px}
+  .work{min-width:0;flex:0 0 calc(100vw - 44px);scroll-snap-align:start;scroll-snap-stop:always}
+  .work-visual{height:58svh;min-height:390px}
+  .work-visual>strong{font-size:14vw}
+  .work footer{min-height:92px;gap:14px}
+  .work footer h3{font-size:20px}
+  .work footer small{display:block;max-width:58vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .skills-toggle{margin-top:24px}
+}

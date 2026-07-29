@@ -1,0 +1,20 @@
+{
+  "name": "Portfolio — Abdoulaye Diallo",
+  "short_name": "Abdoulaye",
+  "description": "Portfolio d'Abdoulaye Diallo, développeur Full Stack et designer UI/UX.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07080c",
+  "theme_color": "#07080c",
+  "icons": [
+    {
+      "src": "/icons/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
