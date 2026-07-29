@@ -167,13 +167,19 @@
 .tech-sticky{position:sticky;top:0;height:100svh;padding:clamp(72px,10vh,110px) var(--pad) 28px;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
 .tech-horizontal .tech-heading{margin:clamp(32px,6vh,68px) 0 clamp(28px,5vh,54px)}
 .tech-horizontal .tech-grid{width:max-content;display:flex;grid-template-columns:none;gap:12px;will-change:transform}
-.tech-horizontal .tech-card{width:clamp(260px,19vw,310px);flex:0 0 clamp(260px,19vw,310px)}
+.tech-horizontal .tech-card{width:clamp(330px,23vw,390px);height:250px;flex:0 0 clamp(330px,23vw,390px);padding:26px}
+.tech-horizontal .tech-icon{width:66px;height:66px}
+.tech-horizontal .tech-icon img{width:38px;height:38px}
+.tech-horizontal .tech-name b{font-size:19px}
 .tech-horizontal .skills-toggle{position:absolute;right:var(--pad);bottom:24px;margin:0}
 @media(max-width:650px){
   .tech-horizontal{height:auto!important;overflow:hidden}
   .tech-sticky{position:relative;top:auto;height:auto;min-height:100svh;padding:100px 20px;overflow:visible}
   .tech-horizontal .tech-heading{margin:65px 0 50px}
   .tech-horizontal .tech-grid{width:calc(100% + 20px);display:flex;gap:12px;will-change:auto;transform:none!important}
-  .tech-horizontal .tech-card{width:auto;flex:0 0 78vw}
+  .tech-horizontal .tech-card{width:auto;height:185px;flex:0 0 78vw;padding:22px}
+  .tech-horizontal .tech-icon{width:58px;height:58px}
+  .tech-horizontal .tech-icon img{width:32px;height:32px}
+  .tech-horizontal .tech-name b{font-size:17px}
   .tech-horizontal .skills-toggle{position:relative;right:auto;bottom:auto;margin:24px auto 0}
 }
